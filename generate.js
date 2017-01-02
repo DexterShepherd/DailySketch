@@ -12,7 +12,7 @@ function generate() {
       return console.log(err);
     }
     let pack = JSON.parse(fs.readFileSync(path + "/package.json", 'utf8'));
-    pack.name = "Daily Sketch " + moment().format('MM-DD-YY');
+    pack.name = "Daily-Sketch-" + moment().format('MM-DD-YY');
 
     fs.writeFile(path + "/package.json", JSON.stringify(pack, null, 2), (err) => {
       if (err) {

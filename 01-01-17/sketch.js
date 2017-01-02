@@ -4,7 +4,6 @@ new p5(p => {
   let speed = 0;
   p.setup = function() {
     const canvas = p.createCanvas(800, 800);
-    p.noStroke();
     p.colorMode(p.HSB, 100);
     p.background(0, 0, 100);
   }
