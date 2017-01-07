@@ -11,3 +11,5 @@ My new years resolution. Make one sketch a day for 365 days.
 ![](thumbnails/01-04-17.png)
 ## 5
 ![](thumbnails/01-05-17.png)
+## 6
+![](thumbnails/01-06-17.png)
