@@ -19,3 +19,5 @@ videos at https://www.instagram.com/dexterwritescode/
 ![](thumbnails/01-07-17.png)
 ## 8
 ![](thumbnails/01-08-17.png)
+## 9
+![](thumbnails/01-09-17.png)
