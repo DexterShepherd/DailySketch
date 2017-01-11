@@ -49,7 +49,7 @@ new p5(p => {
     }
     img_scale.updatePixels();
     p.image(img_scale, 0, 0, 800, 800);
-    p.save(p.frameCount + '.png')
+    //p.save(p.frameCount + '.png')
   }
 });
 

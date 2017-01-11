@@ -67,7 +67,7 @@ new p5(p => {
       }
     }
   
-    p.save('mountains-' + p.frameCount + '.jpg');
+    //p.save('mountains-' + p.frameCount + '.jpg');
   }
 });
 
