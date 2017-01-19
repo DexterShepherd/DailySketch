@@ -72,7 +72,7 @@ new p5(p => {
       cells.shift();
     }
 
-    p.save(p.frameCount + '.jpg');
+    //p.save(p.frameCount + '.jpg');
   }
 
   let Cell = function(state, loc, x, y) {
