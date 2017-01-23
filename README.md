@@ -1,6 +1,5 @@
 # Daily Sketches
 My new years resolution. Make one sketch a day for 365 days. 
-
 videos at https://www.instagram.com/dexterwritescode/
 
 ## 1
@@ -43,3 +42,7 @@ videos at https://www.instagram.com/dexterwritescode/
 ![](thumbnails/01-19-17.png)
 ## 20
 ![](thumbnails/01-20-17.png)
+## 21
+![](thumbnails/01-21-17.png)
+## 22
+![](thumbnails/01-22-17.png)
