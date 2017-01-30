@@ -46,3 +46,17 @@ videos at https://www.instagram.com/dexterwritescode/
 ![](thumbnails/01-21-17.png)
 ## 22
 ![](thumbnails/01-22-17.png)
+## 23
+![](thumbnails/01-23-17.png)
+## 24
+![](thumbnails/01-24-17.png)
+## 25
+![](thumbnails/01-25-17.png)
+## 26
+![](thumbnails/01-26-17.png)
+## 27
+![](thumbnails/01-27-17.png)
+## 28
+![](thumbnails/01-28-17.png)
+## 29
+![](thumbnails/01-29-17.png)
