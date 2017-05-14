@@ -1,5 +1,5 @@
 const p5 = require('p5');
-import 'p5/lib/addons/p5.dom';
+const dom =  require('p5/lib/addons/p5.dom');
 
 new p5(p => {
   let palettes, palette, theta, speed, slider;

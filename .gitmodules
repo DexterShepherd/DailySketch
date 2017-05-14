@@ -1,0 +1,3 @@
+[submodule "webpack-threejs-boilerplate"]
+	path = webpack-threejs-boilerplate
+	url = git@github.com:fazeaction/webpack-threejs-boilerplate.git

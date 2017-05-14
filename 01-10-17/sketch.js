@@ -65,8 +65,7 @@ new p5(p => {
         let size = 2;
         particles[index].display([img_scale.pixels[index], img_scale.pixels[index+1], img_scale.pixels[index+2]], size)
       }
-    }
-    //p.save(p.frameCount + '.jpg');
+    } //p.save(p.frameCount + '.jpg');
   }
 });
 

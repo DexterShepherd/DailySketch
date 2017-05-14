@@ -1,0 +1,85 @@
+const glsl = require('glslify')
+const regl = require('regl')()
+const createPlane = require('primitive-plane')
+
+const camera = require('regl-camera')(regl, {
+  center: [0, 0, 0],
+  distance: 3
+})
+
+const TAU = 6.283185307179586
+
+
+const plane = createPlane(1, 1, 100, 30)
+
+const draw = regl({
+  vert: glsl`
+
+  #pragma glslify: noise = require(glsl-noise/classic/3d)
+  precision mediump float;
+  uniform float time;
+  uniform mat4 projection, view;
+  attribute vec3 position;
+  attribute vec3 normal;
+  attribute vec2 uv;
+  varying vec2 vUv;
+  varying vec3 vNormal;
+
+  float NOISE_SPEED = 0.1;
+  float NOISE_PERIOD = 1.0;
+  float NOISE_AMPLITUDE = 0.7;
+
+
+  void main() {
+    vNormal = normal;
+    vUv = uv;
+    vec3 position3 = position;
+    float noisePeriod = mix(0.1, 2.3, (sin(time) * cos(time) + 1.0)) * NOISE_PERIOD;
+    position3.z = noise(
+      vec3(
+        noisePeriod * position.x + time * 1.5,
+        noisePeriod * position.y * position.x,
+        time * NOISE_SPEED
+      ) 
+    ) * NOISE_AMPLITUDE;
+    gl_Position = projection * view * vec4(position3, 1.0);
+  }
+
+  `,
+
+  frag: `
+
+  precision mediump float;
+  varying vec3 vNormal;
+  varying vec2 vUv;
+  void main() {
+    float brightness = min(1.0,
+      1.5 * (2.0 - length(2.0 * vUv - vec2(1.0)))
+    ); 
+    gl_FragColor = vec4(vec3(vUv, 1.0) * brightness, 1.0);
+  }
+
+  `,
+
+  attributes: {
+    position: plane.positions,
+    normal: plane.normals,
+    uv: plane.uvs
+  },
+
+  elements: plane.cells,
+
+  uniforms: {
+    time: ({time}) => time,
+  },
+
+  primitive: 'lines'
+})
+
+
+regl.frame(() => {
+  camera(() => {
+    regl.clear({ color: [0, 0, 0, 1] })
+    draw()
+  })
+});
